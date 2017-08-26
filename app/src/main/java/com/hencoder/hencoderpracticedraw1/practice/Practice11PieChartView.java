@@ -2,22 +2,28 @@ package com.hencoder.hencoderpracticedraw1.practice;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
 public class Practice11PieChartView extends View {
-
+private Paint mPaint;
     public Practice11PieChartView(Context context) {
-        super(context);
+        this(context,null);
     }
 
     public Practice11PieChartView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs,0);
     }
 
     public Practice11PieChartView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
+    }
+
+    private void init() {
+        mPaint = new Paint();
     }
 
     @Override
